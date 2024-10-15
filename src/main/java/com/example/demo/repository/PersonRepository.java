@@ -12,7 +12,7 @@ import java.sql.SQLException;
 public class PersonRepository {
 
     @PersistenceContext
-    EntityManager entityManager;
+    static EntityManager entityManager;
 
     public static Person getPersonByCity(String city) throws SQLException {
         return entityManager.find(Person.class, 1L);
